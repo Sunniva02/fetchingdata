@@ -1,4 +1,4 @@
-export default async function getUser(id) {
+export default async function getUser(id: string) {
     const response = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
 
     if (!response.ok) {
