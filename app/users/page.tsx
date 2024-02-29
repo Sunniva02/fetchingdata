@@ -1,3 +1,4 @@
+import Link from "next/link";
 import getUsers from "../libs/getUsers"
 interface User {
     id: number;
@@ -12,7 +13,9 @@ export default async function UsersPage() {
                 return (
                     <>
                         <p key={user.id} className="text-3xl mt-10">
-                            {user.name}
+                            <Link href={`/users/${user.id}`}>
+                                {user.name}
+                            </Link>
                         </p>
                     </>)
             })}
